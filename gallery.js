@@ -396,16 +396,47 @@ updateButton();
 // PLAY NUCA MUSIC
 // =====================
 
-music.volume = 0.5;
+// =====================
+// PLAY NUCA MUSIC
+// =====================
 
-music.play()
-.then(()=>{
 
-    console.log("Nuca music playing");
+window.addEventListener("click", function startNuca(){
 
-})
-.catch(()=>{
 
-    console.log("Autoplay blocked");
+    if(!musicStarted){
 
-});
+
+        music.volume = 0.5;
+
+
+        music.play()
+        .then(()=>{
+
+
+            console.log(
+                "Nuca music playing"
+            );
+
+
+            musicStarted = true;
+
+
+        })
+
+
+        .catch(()=>{
+
+
+            console.log(
+                "Music waiting"
+            );
+
+
+        });
+
+
+    }
+
+
+}, { once:true });

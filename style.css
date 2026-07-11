@@ -1,0 +1,808 @@
+/* =====================
+FONT
+===================== */
+
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+
+
+
+
+
+/* =====================
+GLOBAL
+===================== */
+body{
+
+    min-height:100vh;
+
+    background:
+    linear-gradient(
+        135deg,
+        #9333ea,
+        #d8b4fe
+    );
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    font-family:'Patrick',sans-serif;
+    color:white;
+    overflow-x:hidden;
+    overflow-y:auto;
+
+}
+
+
+
+
+
+
+
+
+/* =====================
+LOADING
+===================== */
+
+
+#loader{
+
+
+    position:fixed;
+
+    inset:0;
+
+
+    background:
+    linear-gradient(
+        135deg,
+        #9333ea,
+        #d8b4fe
+    );
+
+
+    display:flex;
+
+    flex-direction:column;
+
+
+    justify-content:center;
+
+    align-items:center;
+
+
+    z-index:999;
+
+
+    transition:1s;
+
+
+}
+
+
+
+
+.loading-heart{
+
+
+    font-size:80px;
+
+
+    animation:pulse 1.5s infinite;
+
+
+}
+
+
+
+
+#loader h2{
+
+
+    margin-top:25px;
+
+
+    font-family:'Lora',serif;
+
+
+    font-size:30px;
+
+
+}
+
+
+
+
+#percent{
+
+
+    margin-top:20px;
+
+
+    font-size:45px;
+
+
+    font-family:'Cormorant Garamond',serif;
+
+
+}
+
+
+
+
+
+
+@keyframes pulse{
+
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+
+    50%{
+
+        transform:scale(1.2);
+
+    }
+
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+/* =====================
+HIDDEN
+===================== */
+
+
+.hidden{
+
+    display:none;
+
+}
+
+
+
+
+
+
+
+
+/* =====================
+LETTER PAGE
+===================== */
+
+
+#letterPage{
+
+    width:90%;
+
+    max-width:600px;
+
+    max-height:90vh;
+
+    overflow-y:auto;
+
+}
+
+
+
+
+.letter-container{
+
+
+    background:
+
+    rgba(255,255,255,.20);
+
+
+    backdrop-filter:blur(15px);
+
+
+    padding:45px;
+
+
+    border-radius:30px;
+
+
+
+    box-shadow:
+
+    0 15px 40px rgba(100,0,150,.3);
+
+
+}
+
+
+
+
+
+.letter-container h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:55px;
+
+    font-weight:600;
+
+    white-space:nowrap;
+
+    margin-bottom:35px;
+
+}
+
+
+
+
+
+.letter-container p{
+
+    font-family:'Lora',serif;
+
+    font-size:24px;
+
+    line-height:2;
+
+    text-align:left;
+
+    max-width:520px;
+
+    margin:auto;
+
+}
+
+
+
+
+
+
+
+
+/* =====================
+OPENING
+===================== */
+
+
+#opening{
+
+
+    width:90%;
+
+
+    max-width:600px;
+
+
+    animation:fadeIn 2s ease;
+
+
+}
+
+
+
+
+
+
+@keyframes fadeIn{
+
+
+    from{
+
+
+        opacity:0;
+
+
+        transform:translateY(40px);
+
+
+    }
+
+
+
+    to{
+
+
+        opacity:1;
+
+
+        transform:translateY(0);
+
+
+    }
+
+
+}
+
+
+
+
+
+
+
+#opening h1{
+
+
+    font-family:'Cormorant Garamond',serif;
+
+
+    font-size:100px;
+
+
+    font-weight:700;
+
+
+    letter-spacing:2px;
+
+
+    text-shadow:
+
+    0 5px 20px rgba(120,40,200,.4);
+
+
+}
+
+
+
+
+
+
+
+#opening h2{
+
+
+    font-family:'Cormorant Garamond',serif;
+
+
+    font-size:50px;
+
+
+    font-weight:600;
+
+
+    margin-top:10px;
+
+
+}
+
+
+
+
+
+
+
+#opening p{
+
+
+    font-family:'Lora',serif;
+
+
+    font-size:28px;
+
+
+    line-height:2;
+
+
+    margin:25px 0;
+
+
+}
+
+
+
+
+
+
+
+
+/* =====================
+CAKE
+===================== */
+
+
+
+.cake-container{
+
+
+    position:relative;
+
+
+    width:450px;
+
+
+    margin:40px auto;
+
+
+    animation:floatCake 3s infinite ease-in-out;
+
+
+}
+
+
+
+
+
+
+.cake-image{
+
+
+    width:450px;
+
+
+    max-width:90%;
+
+
+
+    filter:
+
+    drop-shadow(
+    0 15px 20px rgba(100,0,150,.3)
+    );
+
+
+}
+
+
+
+
+
+
+
+.flame{
+
+
+    position:absolute;
+
+
+    width:70px;
+
+
+    left:50%;
+
+
+    top:10px;
+
+
+    z-index:2;
+
+
+    transform:translateX(-50%);
+
+
+    animation:flameFloat .8s infinite alternate;
+
+
+}
+
+
+
+
+
+
+
+@keyframes floatCake{
+
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+
+    50%{
+
+        transform:translateY(-15px);
+
+    }
+
+
+}
+
+
+
+
+
+
+
+@keyframes flameFloat{
+
+
+    from{
+
+
+        transform:
+        translateX(-50%)
+        scale(1)
+        rotate(-5deg);
+
+
+    }
+
+
+    to{
+
+
+        transform:
+        translateX(-50%)
+        scale(1.15)
+        rotate(5deg);
+
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+/* =====================
+BUTTON
+===================== */
+
+
+button{
+
+
+    border:none;
+
+
+    padding:15px 45px;
+
+
+    border-radius:50px;
+
+
+    background:white;
+
+
+    color:#9333ea;
+
+
+    font-family:'Lora',serif;
+
+
+    font-size:22px;
+
+
+    cursor:pointer;
+
+
+    margin-top:20px;
+
+
+    font-weight:bold;
+
+
+    letter-spacing:1px;
+
+
+    box-shadow:
+
+    0 10px 25px rgba(0,0,0,.15);
+
+
+    transition:.3s;
+
+
+}
+
+
+
+
+
+button:hover{
+
+
+    transform:scale(1.08);
+
+
+    box-shadow:
+
+    0 0 25px rgba(255,255,255,.8);
+
+
+}
+
+
+
+
+
+button:active{
+
+
+    transform:scale(.95);
+
+
+}
+
+
+
+
+
+
+
+#wishText{
+
+
+    font-family:'Lora',serif;
+
+
+    font-style:italic;
+
+
+    font-size:40px;
+
+
+    animation:fadeIn 1s;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =====================
+MOBILE
+===================== */
+
+
+@media(max-width:600px){
+
+
+
+#opening h1{
+
+
+    font-size:65px;
+
+
+}
+
+
+
+
+
+#opening h2{
+
+
+    font-size:38px;
+
+
+}
+
+
+
+
+
+#opening p{
+
+
+    font-size:23px;
+
+
+}
+
+
+
+
+
+.letter-container{
+
+
+    padding:30px;
+
+
+}
+
+
+
+
+
+.letter-container h2{
+
+
+    font-size:32px;
+
+
+}
+
+
+
+
+
+.letter-container p{
+
+
+    font-size:22px;
+
+
+}
+
+
+
+
+
+.cake-container{
+
+
+    width:90vw;
+
+
+}
+
+
+
+
+
+.cake-image{
+
+
+    width:80vw;
+
+
+}
+
+
+
+
+
+.flame{
+
+
+    width:50px;
+
+
+    top:-25px;
+
+
+}
+
+
+
+
+
+button{
+
+
+    font-size:18px;
+
+
+    padding:14px 35px;
+
+
+}
+
+
+}

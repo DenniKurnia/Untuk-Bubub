@@ -263,7 +263,7 @@ function updateButton(){
 nextButton.onclick = function(){
 
 
-    startMusic();
+    
 
 
 
